@@ -1,6 +1,7 @@
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js';
 import PageHeader from '../components/ui/PageHeader.jsx';
 import Card from '../components/ui/Card.jsx';
+import FormattedText from '../components/ui/FormattedText.jsx';
 import { profile } from '../data/profile.js';
 import { heuristics } from '../data/heuristics.js';
 
@@ -20,7 +21,7 @@ export default function About() {
         </h2>
         {profile.about.map((paragraph, index) => (
           <p key={index} className="max-w-[65ch] text-base leading-relaxed text-ink-muted">
-            {paragraph}
+            <FormattedText text={paragraph} />
           </p>
         ))}
       </section>

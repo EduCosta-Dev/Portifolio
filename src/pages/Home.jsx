@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js';
 import Button from '../components/ui/Button.jsx';
 import EmptyState from '../components/ui/EmptyState.jsx';
+import FormattedText from '../components/ui/FormattedText.jsx';
 import ProjectCard from '../components/projects/ProjectCard.jsx';
 import VideoCard from '../components/videos/VideoCard.jsx';
 import VideoModal from '../components/videos/VideoModal.jsx';
@@ -27,7 +28,7 @@ export default function Home() {
           {profile.name}
         </h1>
         <p className="mt-4 max-w-[65ch] text-base leading-relaxed text-ink-muted sm:text-lg">
-          {profile.headline}
+          <FormattedText text={profile.headline} />
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
